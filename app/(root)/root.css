@@ -1,0 +1,73 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.root-page {
+    padding: 0 8%;
+}
+
+/* Hero Section Styles */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding: 20px 0px;
+    gap: 20px;
+  }
+  
+  .hero-content-left {
+      flex: 0 0 40%;
+  }
+  
+  .hero-content-right {
+      flex: 0 0 60%;
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero p {
+    font-size: 2rem;
+    line-height: 1.6;
+  }
+  
+  .hero p strong {
+    font-weight: bold;
+  }
+  
+  .hero .learn-more {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    font-size: 1.2rem;
+  }
+  
+  .hero .learn-more:hover {
+    color: #0056b3;
+  }
+
+  /* Work Section Styles */
+  .card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  .works-more-btn {
+    border: 1px solid;
+    border-radius: 5%;
+    padding: 8px 15px;
+    margin: 20px 0px;
+    transition: background-color 0.3s;
+  }
+
+  .works-more-btn:hover {
+    background-color: #007bff;
+    color: #fff;
+  }
