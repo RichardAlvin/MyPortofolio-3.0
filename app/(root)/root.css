@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.root-page {
-    padding: 0 8%;
-}
 
 /* Hero Section Styles */
 .hero {
@@ -12,7 +9,7 @@
     justify-content: space-between;
     align-items: center;
     text-align: left;
-    padding: 20px 0px;
+    padding: 20px 8%;
     gap: 20px;
   }
   
@@ -51,6 +48,10 @@
   }
 
   /* Work Section Styles */
+  .works {
+    padding: 0 8%;
+  }
+
   .card-container {
     display: flex;
     flex-wrap: wrap;
@@ -70,4 +71,65 @@
   .works-more-btn:hover {
     background-color: #007bff;
     color: #fff;
+  }
+
+  /* Skill Section Styles */
+  .skills-certs{
+    background-color: #111;
+    color: #fff;
+    padding: 5% 8%;
+  }
+
+  .skills-certs h2 {
+    color: #aaa;
+    padding-bottom: 10px;
+  }
+
+  .skills-certs h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+
+  .skills-icon{
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 32px 0px 48px;
+  }
+
+  .skills-icon > div {
+    border: 1px solid lightblue;
+    padding: 10px;
+  }
+
+  .skills-icon > div > img {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Certs Section Styles */
+  .certs-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px , 1fr));
+    gap: 25px;
+    padding: 32px 0px;
+  }
+
+  .certs-div {
+    flex-grow: 50%;
+  }
+
+  .certs-div > h4{
+    font-size:22px;
+    padding-bottom: 25px;
+  }
+
+  .certs-div > p {
+    color: #aaa;
+    padding-bottom: 15px;
+  }
+
+  /* Articles Section Styles */
+  .articles {
+    padding: 5% 8%;
   }
