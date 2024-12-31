@@ -22,7 +22,7 @@ export default function page() {
           <Card />
           <Card />
         </div>
-        <button className="works-more-btn">Show More ↗</button>
+        <a href="/works"><button className="works-more-btn">Show More ↗</button></a>
       </section>
 
       <section className="skills-certs">
@@ -95,7 +95,7 @@ export default function page() {
           <Card />
           <Card />
         </div>
-        <button className="works-more-btn">Show More ↗</button>
+        <a href="/articles"><button className="works-more-btn">Show More ↗</button></a>
       </section>
     </>
   );

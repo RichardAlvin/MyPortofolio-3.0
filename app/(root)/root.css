@@ -48,8 +48,8 @@
   }
 
   /* Work Section Styles */
-  .works {
-    padding: 0 8%;
+  .works, .article-highlight, .work-highlight, .related-articles {
+    padding: 2% 8%;
   }
 
   .card-container {
@@ -132,4 +132,100 @@
   /* Articles Section Styles */
   .articles {
     padding: 5% 8%;
+  }
+
+  .articles > p {
+    font-size: 28px;
+    padding: 10px 0px 25px;
+    line-height: 35px;
+  }
+
+  .article-list {
+    padding: 5% 8%;
+    background-color: black;
+  }
+
+  .list-header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-search {
+    position: relative;
+    width: 300px;
+  }
+
+  .list-search-icon {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+  }
+
+  .list-search-input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: #1e1e1e;
+    color: #fff;
+    font-size: 14px;
+    outline: none;
+  }
+
+  .list-search-input::placeholder {
+    color: #888;
+  }
+
+  .list-filter {
+    display: flex;
+  }
+
+  .list-filter button {
+    padding: 10px 20px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 14px;
+  }
+
+  /* Detail Article Section Styles */
+  .related-articles{
+    position:relative;
+    padding-bottom: 50px;
+  }
+
+  .related-articles h2 {
+    padding: 20px 0px;
+    font-size: 26px;
+    font-weight: bold;
+  }
+
+  .circle-3,
+  .circle-4 {
+    position: absolute;
+    border-radius: 50%;
+  }
+
+  .circle-3 {
+    width: 600px;
+    height: 600px;
+    background: rgba(255, 182, 193, 0.2); /* Light blue */
+    top: 20px;
+    left: 20%;
+    z-index: -3;
+  }
+  
+  .circle-4 {
+    width: 700px;
+    height: 700px;
+    background: rgba(173, 216, 230, 0.2); /* Light pink */
+    bottom: -100px;
+    right: 5%;
+    z-index:-2;
   }

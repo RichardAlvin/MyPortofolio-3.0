@@ -1,0 +1,47 @@
+.detail-page-header {
+    padding: 3% 12%;
+    position: relative;
+    display:flex;
+    justify-content: center;
+}
+
+.detail-page-header-left {
+    flex-basis: 40%;
+}
+
+.detail-page-header-left > img{
+  height: 250px;
+}
+
+.detail-page-header-right {
+    flex-basis: 60%;
+}
+
+.circle-1,
+.circle-2 {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-1 {
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 182, 193, 0.2); /* Light blue */
+  top: 20px;
+  left: 20%;
+  z-index: -3;
+}
+
+.circle-2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(173, 216, 230, 0.2); /* Light pink */
+  bottom: -100px;
+  right: 35%;
+  z-index:-2;
+}
+
+.detail-page-body {
+    padding: 3% 25% 3% 12%;
+    background-color: white;
+}
