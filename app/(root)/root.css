@@ -134,7 +134,7 @@
     padding: 5% 8%;
   }
 
-  .articles > p {
+  .articles > h3 {
     font-size: 28px;
     padding: 10px 0px 25px;
     line-height: 35px;
@@ -228,4 +228,35 @@
     bottom: -100px;
     right: 5%;
     z-index:-2;
+  }
+
+  /* Root Responsive Design */
+  @media (max-width: 992px) {
+    .hero h1 {
+      font-size: 2rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      line-height: 1.6;
+    }
+  }
+
+  @media (max-width: 576px) {
+    .hero {
+      flex-direction: column;
+    }
+    
+    .card-container{
+      justify-content: center;
+    }
+
+    .list-header {
+      flex-direction: column;
+      justify-content: center;
+    }
+  
+    .list-search {
+      width: auto;
+    }
   }

@@ -89,7 +89,7 @@ export default function page() {
 
       <section className="articles">
         <h2>Recent Articles</h2>
-        <p>Research and Experiment are<br/>my middle name. Here some what I do</p>
+        <h3>Research and Experiment are<br/>my middle name. Here some what I do</h3>
         <div className="card-container">
           <Card />
           <Card />
