@@ -194,6 +194,23 @@
     font-size: 14px;
   }
 
+  .loading {
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    font-family: monospace;
+    text-align: center;
+    font-size: 40px;
+    clip-path: inset(0 3ch 0 0);
+    animation: l 1s steps(4, jump-none) infinite;
+  }
+  
+  @keyframes l {
+    to {
+      clip-path: inset(0)
+    }
+  }
+
   /* Detail Article Section Styles */
   .related-articles{
     position:relative;

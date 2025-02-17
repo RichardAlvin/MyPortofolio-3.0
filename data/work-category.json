@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Development",
+        "slug": "development"
+    },
+    {
+        "id": 2,
+        "name": "Cloud",
+        "slug": "cloud"
+    },
+    {
+        "id": 3,
+        "name": "Database",
+        "slug": "database"
+    },
+    {
+        "id": 4,
+        "name": "Other",
+        "slug": "other"
+    }
+]

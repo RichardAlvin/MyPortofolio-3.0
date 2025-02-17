@@ -18,7 +18,7 @@ const Navbar = () => {
         <ul className="navbar-links">
             <li><Link href="/works">Works</Link></li>
             <li><Link href="/articles">Articles</Link></li>
-            <li><Link href="#skills">CV</Link></li>
+            <li><Link href="/cv">CV</Link></li>
             <li><Link href="#certification">Games</Link></li>
         </ul>
         <div className="navbar-socials">
@@ -41,7 +41,7 @@ const Navbar = () => {
         {isClick && (<div className="dropdown-menu">
           <li><Link href="/works">Works</Link></li>
           <li><Link href="/articles">Articles</Link></li>
-          <li><Link href="#skills">CV</Link></li>
+          <li><Link href="/cv">CV</Link></li>
           <li><Link href="#certification">Games</Link></li>
           <li>        
             <div className="navbar-socials-res">
