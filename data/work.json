@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "title": "Test Work",
+        "slug": "test-work",
+        "category": "Dev",
+        "description": "gergaer arga",
+        "image": "",
+        "isHighlight": true,
+        "createdAt": "2025-02-27T10:30:00Z",
+        "createdBy": "",
+        "updatedAt": ""
+    },
+    {
+        "id": 2,
+        "title": "Test Work 2",
+        "slug": "test-work-2",
+        "category": "Dev",
+        "description": "gergaer arga",
+        "image": "",
+        "isHighlight": true,
+        "createdAt": "2025-02-27T10:30:00Z",
+        "createdBy": "",
+        "updatedAt": ""
+    },
+    {
+        "id": 3,
+        "title": "Test Work 3",
+        "slug": "test-work-3",
+        "category": "Dev",
+        "description": "gergaer arga",
+        "image": "",
+        "isHighlight": true,
+        "createdAt": "2025-02-27T10:30:00Z",
+        "createdBy": "",
+        "updatedAt": ""
+    },
+    {
+        "id": 4,
+        "title": "Test Work 4",
+        "slug": "test-work-4",
+        "category": "Dev",
+        "description": "gergaer arga",
+        "image": "",
+        "isHighlight": false,
+        "createdAt": "2025-02-27T10:30:00Z",
+        "createdBy": "",
+        "updatedAt": ""
+    }
+]

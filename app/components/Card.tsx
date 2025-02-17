@@ -10,11 +10,16 @@ export type DataCard = {
   createdAt: string;
 }
 
-const Card: React.FC<{ data: DataCard }> = ({ data }) => {
+interface CardProps {
+  data: DataCard;
+  basePath: string;
+}
+
+const Card: React.FC<CardProps> = ({ data, basePath }) => {
   if (!data) return null;
 
   return (
-    <a className="card-container" href={`/articles/${data.slug}`}>
+    <a className="card-container" href={`/${basePath}/${data.slug}`}>
       <div className="card">
         <div className="card-image"></div>
         <div className="card-content">

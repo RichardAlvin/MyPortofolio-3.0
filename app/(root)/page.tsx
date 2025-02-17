@@ -1,5 +1,6 @@
 //import Card from '../components/Card';
 import Link from "next/link";
+//import Image from 'next/image';
 
 export default function page() {
   return (
@@ -32,28 +33,28 @@ export default function page() {
           <h3>All Programming language just a tools,<br/>but the logic is the heart of programming</h3>
           <div className="skills-icon">
             <div>
-              <img src="assets/skills/netcore-logo.png"></img>
+              <img src="assets/skills/netcore-logo.png" alt="netcore-logo" />
             </div>
             <div>
-              <img src="assets/skills/Laravel-Logo.svg"></img>
+              <img src="assets/skills/Laravel-Logo.svg" alt="laravel-logo"/>
             </div>
             <div>
-              <img src="assets/skills/go-logo.svg"></img>
+              <img src="assets/skills/go-logo.svg" alt="go-logo" />
             </div>
             <div>
-              <img src="assets/skills/sqlserver-logo.png"></img>
+              <img src="assets/skills/sqlserver-logo.png" alt="sqlserver-logo"/>
             </div>
             <div>
-              <img src="assets/skills/postgresql-logo.webp"></img>
+              <img src="assets/skills/postgresql-logo.webp" alt="postgresql-logo"/>
             </div>
             <div>
-              <img src="assets/skills/blazor-logo.png"></img>
+              <img src="assets/skills/blazor-logo.png" alt="blazor-logo" />
             </div>
             <div>
-              <img src="assets/skills/react-logo.png"></img>
+              <img src="assets/skills/react-logo.png" alt="react-logo" />
             </div>
             <div>
-              <img src="assets/skills/gcp-logo.png"></img>
+              <img src="assets/skills/gcp-logo.png" alt="gcp-logo" />
             </div>
           </div>
         </section>

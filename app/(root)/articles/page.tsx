@@ -48,7 +48,7 @@ const Page = () => {
                     {loadingHighlight ? (
                         <p>Loading...</p>
                     ) : highlightArticles && highlightArticles.length > 0 ? (
-                        highlightArticles.map((highlightArticle) => <Card key={highlightArticle.id} data={highlightArticle} />)
+                        highlightArticles.map((highlightArticle) => <Card key={highlightArticle.id} data={highlightArticle} basePath='articles'/>)
                     ) : (
                         <p>No articles found.</p>
                     )}
@@ -75,7 +75,7 @@ const Page = () => {
                     {loadingArticle ? (
                         <p>Loading...</p>
                     ) : articles && articles.length > 0 ? (
-                        articles.map((article) => <Card key={article.id} data={article} />)
+                        articles.map((article) => <Card key={article.id} data={article} basePath='articles'/>)
                     ) : (
                         <p>No articles found.</p>
                     )}

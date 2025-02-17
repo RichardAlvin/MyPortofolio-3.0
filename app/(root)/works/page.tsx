@@ -1,7 +1,34 @@
-import React from 'react'
-//import Card from '../../components/Card';
+'use client'
+import React, { useState, useEffect } from 'react'
+import Card, {DataCard} from '../../components/Card';
 
-const page = () => {
+const Page = () => {
+    const [highlightWorks, setHighlightWorks] = useState<DataCard[] | null>([]);
+    const [loadingHighlight, setLoadingHighlight] = useState(true);
+
+    const [works, setWorks] = useState<DataCard[] | null>([]);
+    const [loadingWorks, setLoadingWork] = useState(true);
+
+    useEffect(() => {
+        async function fetchHighlightWorks() {
+            const res = await fetch('/api/works?IsHighlight=true')
+            const data = await res.json()
+
+            setHighlightWorks(data.data)
+            setLoadingHighlight(false)
+        }
+
+        async function fetchWorks() {
+            const res = await fetch('/api/works')
+            const data = await res.json()
+
+            setWorks(data.data)
+            setLoadingWork(false)
+        }
+        fetchHighlightWorks()
+        fetchWorks()
+    }, [])
+
   return (
     <>
         <section className="hero">
@@ -18,9 +45,13 @@ const page = () => {
         <section className="work-highlight">
             <h2>Highlight</h2>
             <div className="card-container">
-                {/* <Card />
-                <Card />
-                <Card /> */}
+                {loadingHighlight ? (
+                    <p>Loading...</p>
+                ) : highlightWorks && highlightWorks.length > 0 ? (
+                    highlightWorks.map((highlightWork) => <Card key={highlightWork.id} data={highlightWork} basePath='works'/>)
+                ) : (
+                    <p>No works found.</p>
+                )}
             </div>
         </section>
 
@@ -41,16 +72,17 @@ const page = () => {
                 </div>
             </div>
             <div className="card-container">
-                {/* <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card />
-                <Card /> */}
+                {loadingWorks ? (
+                    <p>Loading...</p>
+                ) : works && works.length > 0 ? (
+                    works.map((work) => <Card key={work.id} data={work} basePath='works'/>)
+                ) : (
+                    <p>No works found.</p>
+                )}
             </div>
         </section>
     </>
   )
 }
 
-export default page
+export default Page
