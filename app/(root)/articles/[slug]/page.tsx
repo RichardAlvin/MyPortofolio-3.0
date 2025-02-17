@@ -11,9 +11,9 @@ const page = () => {
           <div className="circle-4"></div>
           <h2>Related Articles</h2>
           <div className="card-container">
+            {/* <Card />
             <Card />
-            <Card />
-            <Card />
+            <Card /> */}
           </div>
         </section>
     </>

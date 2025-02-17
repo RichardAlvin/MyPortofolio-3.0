@@ -18,9 +18,9 @@ const page = () => {
         <section className="work-highlight">
             <h2>Highlight</h2>
             <div className="card-container">
+                {/* <Card />
                 <Card />
-                <Card />
-                <Card />
+                <Card /> */}
             </div>
         </section>
 
@@ -41,12 +41,12 @@ const page = () => {
                 </div>
             </div>
             <div className="card-container">
+                {/* <Card />
                 <Card />
                 <Card />
                 <Card />
                 <Card />
-                <Card />
-                <Card />
+                <Card /> */}
             </div>
         </section>
     </>

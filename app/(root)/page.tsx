@@ -18,9 +18,9 @@ export default function page() {
       <section className="works">
         <h2>Recent Works</h2>
         <div className="card-container">
+          {/* <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card /> */}
         </div>
         <a href="/works"><button className="works-more-btn">Show More ↗</button></a>
       </section>
@@ -91,9 +91,9 @@ export default function page() {
         <h2>Recent Articles</h2>
         <h3>Research and Experiment are<br/>my middle name. Here some what I do</h3>
         <div className="card-container">
+          {/* <Card />
           <Card />
-          <Card />
-          <Card />
+          <Card /> */}
         </div>
         <a href="/articles"><button className="works-more-btn">Show More ↗</button></a>
       </section>
