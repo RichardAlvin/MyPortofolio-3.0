@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react'
 import Card, {DataCard} from '../../components/Card';
 
-const page = () => {
+const Page = () => {
     const [highlightArticles, setHighlightArticles] = useState<DataCard[] | null>([]);
     const [loadingHighlight, setLoadingHighlight] = useState(true);
 
@@ -85,4 +85,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page

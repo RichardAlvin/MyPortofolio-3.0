@@ -1,4 +1,5 @@
-import Card from '../components/Card';
+//import Card from '../components/Card';
+import Link from "next/link";
 
 export default function page() {
   return (
@@ -10,7 +11,7 @@ export default function page() {
           <div className="hero-content-right">
               <p>
               <strong>Richard Alvin Pratama</strong> is a sans-serif typeface funded by Canonical and developed by Dalton Maag.
-              <a href="#" className="learn-more">Learn more ↗</a>
+              <Link href="#" className="learn-more">Learn more ↗</Link>
               </p>
           </div>
       </section>
@@ -22,7 +23,7 @@ export default function page() {
           <Card />
           <Card /> */}
         </div>
-        <a href="/works"><button className="works-more-btn">Show More ↗</button></a>
+        <Link href="/works"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
 
       <section className="skills-certs">
@@ -95,7 +96,7 @@ export default function page() {
           <Card />
           <Card /> */}
         </div>
-        <a href="/articles"><button className="works-more-btn">Show More ↗</button></a>
+        <Link href="/articles"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
     </>
   );

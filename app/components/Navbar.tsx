@@ -1,5 +1,6 @@
 "use client"
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import Link from "next/link";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -15,10 +16,10 @@ const Navbar = () => {
           <a href="/" className="navbar-title"><b>Richard Alvin</b></a>
         </div>
         <ul className="navbar-links">
-            <li><a href="/works">Works</a></li>
-            <li><a href="/articles">Articles</a></li>
-            <li><a href="#skills">CV</a></li>
-            <li><a href="#certification">Games</a></li>
+            <li><Link href="/works">Works</Link></li>
+            <li><Link href="/articles">Articles</Link></li>
+            <li><Link href="#skills">CV</Link></li>
+            <li><Link href="#certification">Games</Link></li>
         </ul>
         <div className="navbar-socials">
             <a href="https://github.com/RichardAlvin" className="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
@@ -38,10 +39,10 @@ const Navbar = () => {
           </button>
         </div>
         {isClick && (<div className="dropdown-menu">
-          <li><a href="/works">Works</a></li>
-          <li><a href="/articles">Articles</a></li>
-          <li><a href="#skills">CV</a></li>
-          <li><a href="#certification">Games</a></li>
+          <li><Link href="/works">Works</Link></li>
+          <li><Link href="/articles">Articles</Link></li>
+          <li><Link href="#skills">CV</Link></li>
+          <li><Link href="#certification">Games</Link></li>
           <li>        
             <div className="navbar-socials-res">
               <a href="#" className="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
