@@ -1,8 +1,56 @@
-//import Card from '../components/Card';
+'use client'
+import React, { useState, useEffect } from 'react'
+import Card, {DataCard} from '../components/Card';
 import Link from "next/link";
 //import Image from 'next/image';
 
-export default function page() {
+interface CertificationCard {
+  id: string;
+  title: string;
+  description: string;
+  expiredAt: string;
+  link: string;
+}
+
+export default function Page() {
+  const [highlightWorks, setHighlightWorks] = useState<DataCard[] | null>([]);
+  const [loadingWorksHighlight, setLoadingWorksHighlight] = useState(true);
+
+  const [highlightCertifications, setHighlightCertifications] = useState<CertificationCard[] | null>([]);
+  const [loadingCertificationsHighlight, setLoadingCertificationHighlight] = useState(true);
+
+  const [highlightArticles, setHighlightArticles] = useState<DataCard[] | null>([]);
+  const [loadingArticlesHighlight, setLoadingArticlesHighlight] = useState(true);
+
+  useEffect(() => {
+      async function fetchHighlightWorks() {
+          const res = await fetch('/api/works?IsHighlight=true')
+          const data = await res.json()
+
+          setHighlightWorks(data.data)
+          setLoadingWorksHighlight(false)
+      }
+
+      async function fetchHighlightCertifications() {
+        const res = await fetch('/api/certifications?IsHighlight=true')
+        const data = await res.json()
+
+        setHighlightCertifications(data.data)
+        setLoadingCertificationHighlight(false)
+      }
+
+      async function fetchHighlightArticles() {
+          const res = await fetch('/api/articles?IsHighlight=true')
+          const data = await res.json()
+
+          setHighlightArticles(data.data)
+          setLoadingArticlesHighlight(false)
+      }
+      fetchHighlightWorks()
+      fetchHighlightCertifications()
+      fetchHighlightArticles()
+  }, [])
+
   return (
     <>
       <section className="hero">
@@ -20,9 +68,13 @@ export default function page() {
       <section className="works">
         <h2>Recent Works</h2>
         <div className="card-container">
-          {/* <Card />
-          <Card />
-          <Card /> */}
+          {loadingWorksHighlight ? (
+              <div className="loading">Loading...</div>
+          ) : highlightWorks && highlightWorks.length > 0 ? (
+            highlightWorks.map((highlightWork) => <Card key={highlightWork.id} data={highlightWork} basePath='works'/>)
+          ) : (
+              <div className="notfound">No works found.</div>
+          )}
         </div>
         <Link href="/works"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
@@ -63,26 +115,19 @@ export default function page() {
           <h2>Certification</h2>
           <h3>Proved by Certification Owned</h3>
           <div className="certs-list">
-            <div className="certs-div">
-              <h4>GCP Associate Cloud Engineer ↗</h4>
-              <p>Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud</p>
-              <p>Valid until: November 2028</p>
-            </div>
-            <div className="certs-div">
-              <h4>GCP Associate Cloud Engineer ↗</h4>
-              <p>Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud</p>
-              <p>Valid until: November 2028</p>
-            </div>
-            <div className="certs-div">
-              <h4>GCP Associate Cloud Engineer ↗</h4>
-              <p>Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud</p>
-              <p>Valid until: November 2028</p>
-            </div>
-            <div className="certs-div">
-              <h4>GCP Associate Cloud Engineer ↗</h4>
-              <p>Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud</p>
-              <p>Valid until: November 2028</p>
-            </div>
+            {loadingCertificationsHighlight ? (
+                <div className="loading">Loading...</div>
+            ) : highlightCertifications && highlightCertifications.length > 0 ? (
+              highlightCertifications.map((highlightCertification) => 
+                <Link key={highlightCertification.id} href={highlightCertification.link}><div className="certs-div">
+                  <h4>{highlightCertification.title}</h4>
+                  <p>{highlightCertification.description}</p>
+                  <p>Valid until: {highlightCertification.expiredAt}</p>
+                </div></Link>
+              )
+            ) : (
+                <div className="notfound">No works found.</div>
+            )}
           </div>
           <button className="works-more-btn">Show More ↗</button>
         </section>
@@ -93,9 +138,13 @@ export default function page() {
         <h2>Recent Articles</h2>
         <h3>Research and Experiment are<br/>my middle name. Here some what I do</h3>
         <div className="card-container">
-          {/* <Card />
-          <Card />
-          <Card /> */}
+          {loadingArticlesHighlight ? (
+              <div className="loading">Loading...</div>
+          ) : highlightArticles && highlightArticles.length > 0 ? (
+            highlightArticles.map((highlightArticle) => <Card key={highlightArticle.id} data={highlightArticle} basePath='articles'/>)
+          ) : (
+              <div className="notfound">No works found.</div>
+          )}
         </div>
         <Link href="/articles"><button className="works-more-btn">Show More ↗</button></Link>
       </section>

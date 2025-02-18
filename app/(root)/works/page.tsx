@@ -98,9 +98,10 @@ const Page = () => {
                 </div>
                 <div className="list-filter">
                     <button className={`button ${selectedCategory === null ? "active" : ""}`} onClick={() => handleCategoryChange(null)}>All</button>
-                    <button className={`button ${selectedCategory === "Non tech" ? "active" : ""}`} onClick={() => handleCategoryChange("Non tech")}>Non tech</button>
-                    <button className={`button ${selectedCategory === "Research" ? "active" : ""}`} onClick={() => handleCategoryChange("Research")}>Research</button>
-                    <button className={`button ${selectedCategory === "Development" ? "active" : ""}`} onClick={() => handleCategoryChange("Development")}>Development</button>
+                    <button className={`button ${selectedCategory === "Development" ? "active" : ""}`} onClick={() => handleCategoryChange("Development")}>Dev</button>
+                    <button className={`button ${selectedCategory === "Cloud" ? "active" : ""}`} onClick={() => handleCategoryChange("Cloud")}>Cloud</button>
+                    <button className={`button ${selectedCategory === "Database" ? "active" : ""}`} onClick={() => handleCategoryChange("Database")}>DB</button>
+                    <button className={`button ${selectedCategory === "Other" ? "active" : ""}`} onClick={() => handleCategoryChange("Other")}>Etc</button>
                 </div>
             </div>
             <div className="card-container">
@@ -109,7 +110,7 @@ const Page = () => {
                 ) : works && works.length > 0 ? (
                     works.map((work) => <Card key={work.id} data={work} basePath='works'/>)
                 ) : (
-                    <p>No works found.</p>
+                    <div className="notfound">No works found.</div>
                 )}
             </div>
         </section>

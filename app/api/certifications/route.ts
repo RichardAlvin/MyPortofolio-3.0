@@ -1,9 +1,9 @@
-import data from "@/data/article.json"
+import data from "@/data/certification.json";
 import { NextResponse } from "next/server";
 
 export async function GET(req: Request) {
     const { searchParams } = new URL(req.url);
-
+    
     // Get query parameters
     const isHighlight = searchParams.get("IsHighlight");
     const searchQuery = searchParams.get("search")?.toLowerCase() || "";
@@ -21,11 +21,6 @@ export async function GET(req: Request) {
     // Filter by search query (title)
     if (searchQuery) {
         filteredData = filteredData.filter(work => work.title.toLowerCase().includes(searchQuery));
-    }
-
-    // Filter by category
-    if (category) {
-        filteredData = filteredData.filter(work => work.category.toLowerCase() === category);
     }
 
     return NextResponse.json({ data: filteredData });

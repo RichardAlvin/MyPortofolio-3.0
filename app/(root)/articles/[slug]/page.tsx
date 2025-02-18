@@ -1,13 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Card from '../../../components/Card';
+import Card, {DataCard} from '../../../components/Card';
 import DetailPage, {DataDetailPageProps} from '../../../components/DetailPage';
 
 const page = () => {
   const { slug } = useParams();
   const [detailArticle, setDetailArticle] = useState<DataDetailPageProps | null>(null);
   const [loadingDetailArticle, setLoadingDetailArticle] = useState(true);
+
+    const [highlightArticles, setHighlightArticles] = useState<DataCard[] | null>([]);
+    const [loadingHighlight, setLoadingHighlight] = useState(true);
 
   useEffect(() => {
       async function fetchDetailArticle() {
@@ -29,6 +32,17 @@ const page = () => {
       fetchDetailArticle();
   }, [slug]);
 
+  useEffect(() => {
+    async function fetchHighlightArticles() {
+        const res = await fetch('/api/articles?IsHighlight=true')
+        const data = await res.json()
+
+        setHighlightArticles(data.data)
+        setLoadingHighlight(false)
+    }
+    fetchHighlightArticles()
+  }, [])
+
   return (
     <>
         {loadingDetailArticle ? (
@@ -43,9 +57,13 @@ const page = () => {
           <div className="circle-4"></div>
           <h2>Related Articles</h2>
           <div className="card-container">
-            {/* <Card />
-            <Card />
-            <Card /> */}
+            {loadingHighlight ? (
+                <div className="loading">Loading...</div>
+            ) : highlightArticles && highlightArticles.length > 0 ? (
+              highlightArticles.map((highlightArticle) => <Card key={highlightArticle.id} data={highlightArticle} basePath='articles'/>)
+            ) : (
+                <p>No articles found.</p>
+            )}
           </div>
         </section>
     </>

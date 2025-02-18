@@ -181,18 +181,26 @@
 
   .list-filter {
     display: flex;
-  }
+}
 
-  .list-filter button {
+.list-filter button {
     padding: 10px 20px;
-    border: 1px solid #333;
+    border: 1px solid #fff;
     border-radius: 8px;
     background-color: transparent;
     color: #fff;
     cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
+    transition: background-color 0.3s, color 0.3s, border 0.3s;
     font-size: 14px;
-  }
+}
+
+.list-filter button.active {
+  background-color: #facc15;
+  color: #333;
+  border-color: #facc15;
+  box-shadow: 0 4px 10px rgba(250, 204, 21, 0.5);
+  transform: scale(1.05);
+}
 
   .loading {
     font-weight: bold;
@@ -209,6 +217,15 @@
     to {
       clip-path: inset(0)
     }
+  }
+
+  .notfound {
+    font-weight: bold;
+    color: white;
+    display: inline-block;
+    font-family: monospace;
+    text-align: center;
+    font-size: 40px;
   }
 
   /* Detail Article Section Styles */

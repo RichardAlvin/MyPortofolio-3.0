@@ -44,4 +44,5 @@
 .detail-page-body {
     padding: 3% 25% 3% 12%;
     background-color: white;
+    min-height: 100vh;
 }

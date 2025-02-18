@@ -1,13 +1,16 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
-import Card from '../../../components/Card';
+import Card, {DataCard} from '../../../components/Card';
 import DetailPage, {DataDetailPageProps} from '../../../components/DetailPage';
 
 const Page = () => {
     const { slug } = useParams();
     const [detailWork, setDetailWork] = useState<DataDetailPageProps | null>(null);
     const [loadingDetailWork, setLoadingDetailWork] = useState(true);
+
+    const [highlightWorks, setHighlightWorks] = useState<DataCard[] | null>([]);
+    const [loadingHighlight, setLoadingHighlight] = useState(true);
 
     useEffect(() => {
         async function fetchDetailWork() {
@@ -29,6 +32,17 @@ const Page = () => {
         fetchDetailWork();
     }, [slug]);
 
+    useEffect(() => {
+        async function fetchHighlightWorks() {
+            const res = await fetch('/api/works?IsHighlight=true')
+            const data = await res.json()
+
+            setHighlightWorks(data.data)
+            setLoadingHighlight(false)
+        }
+        fetchHighlightWorks()
+    }, [])
+
     return (
         <>
             {loadingDetailWork ? (
@@ -43,9 +57,13 @@ const Page = () => {
                 <div className="circle-4"></div>
                 <h2>Related Works</h2>
                 <div className="card-container">
-                    {/* <Card />
-                    <Card />
-                    <Card /> */}
+                    {loadingHighlight ? (
+                        <div className="loading">Loading...</div>
+                    ) : highlightWorks && highlightWorks.length > 0 ? (
+                        highlightWorks.map((highlightWork) => <Card key={highlightWork.id} data={highlightWork} basePath='works'/>)
+                    ) : (
+                        <p>No works found.</p>
+                    )}
                 </div>
             </section>
         </>

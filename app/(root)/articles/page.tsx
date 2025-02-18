@@ -8,6 +8,36 @@ const Page = () => {
 
     const [articles, setArticles] = useState<DataCard[] | null>([]);
     const [loadingArticle, setLoadingArticle] = useState(true);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+
+    async function fetchArticles() {
+        setLoadingArticle(true);
+        try {
+            const queryParams = new URLSearchParams();
+            if (searchQuery) queryParams.append("search", searchQuery);
+            if (selectedCategory) queryParams.append("category", selectedCategory);
+    
+            const res = await fetch(`/api/articles?${queryParams.toString()}`);
+            const data = await res.json();
+    
+            setArticles(data.data);
+        } catch (error) {
+            console.error("Error fetching articles:", error);
+        } finally {
+            setTimeout(() => {
+                setLoadingArticle(false);
+            }, 800);
+        }
+    }
+
+    const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+        setSearchQuery(event.target.value);
+    };
+    
+    const handleCategoryChange = (category: string | null) => {
+        setSelectedCategory(category);
+    };
 
     useEffect(() => {
         async function fetchHighlightArticles() {
@@ -17,17 +47,12 @@ const Page = () => {
             setHighlightArticles(data.data)
             setLoadingHighlight(false)
         }
-
-        async function fetchArticles() {
-            const res = await fetch('/api/articles')
-            const data = await res.json()
-
-            setArticles(data.data)
-            setLoadingArticle(false)
-        }
         fetchHighlightArticles()
-        fetchArticles()
     }, [])
+
+    useEffect(() => {
+        fetchArticles();
+    }, [searchQuery, selectedCategory]);
 
     return (
         <>
@@ -63,21 +88,29 @@ const Page = () => {
                             <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
                             </svg>
                         </span>
-                        <input type="text" className="list-search-input" placeholder="Search..."></input>
+                        <input
+                            type="text"
+                            className="list-search-input"
+                            placeholder="Search..."
+                            value={searchQuery}
+                            onChange={handleSearchChange}
+                        />
                     </div>
                     <div className="list-filter">
-                        <button className="button active">Non tech</button>
-                        <button className="button">Research</button>
-                        <button className="button">Development</button>
+                        <button className={`button ${selectedCategory === null ? "active" : ""}`} onClick={() => handleCategoryChange(null)}>All</button>
+                        <button className={`button ${selectedCategory === "Development" ? "active" : ""}`} onClick={() => handleCategoryChange("Development")}>Dev</button>
+                        <button className={`button ${selectedCategory === "Cloud" ? "active" : ""}`} onClick={() => handleCategoryChange("Cloud")}>Cloud</button>
+                        <button className={`button ${selectedCategory === "Database" ? "active" : ""}`} onClick={() => handleCategoryChange("Database")}>DB</button>
+                        <button className={`button ${selectedCategory === "Other" ? "active" : ""}`} onClick={() => handleCategoryChange("Other")}>Etc</button>
                     </div>
                 </div>
                 <div className="card-container">
                     {loadingArticle ? (
-                        <p>Loading...</p>
+                        <div className="loading">Loading...</div>
                     ) : articles && articles.length > 0 ? (
                         articles.map((article) => <Card key={article.id} data={article} basePath='articles'/>)
                     ) : (
-                        <p>No articles found.</p>
+                        <div className="notfound">No articles found.</div>
                     )}
                 </div>
             </section>
