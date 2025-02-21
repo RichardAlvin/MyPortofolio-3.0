@@ -2,6 +2,13 @@
 import React, { useState, useEffect } from 'react'
 import Card, {DataCard} from '../../components/Card';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import 'swiper/css/autoplay';
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+
 const Page = () => {
     const [highlightWorks, setHighlightWorks] = useState<DataCard[] | null>([]);
     const [loadingHighlight, setLoadingHighlight] = useState(true);
@@ -70,13 +77,39 @@ const Page = () => {
         <section className="work-highlight">
             <h2>Highlight</h2>
             <div className="card-container">
+            <Swiper 
+                modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+                spaceBetween={20}
+                slidesPerView={1}
+                navigation
+                pagination={{ clickable: true }}
+                loop={true}
+                autoplay={{ delay:2000, disableOnInteraction: false}}
+                effect="coverflow"
+                coverflowEffect={{
+                    rotate: 30,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                    slideShadows: false,
+                }}
+                breakpoints={{
+                    640: { slidesPerView: 2},
+                    1024: { slidesPerView: 3 }
+                }}
+            >
                 {loadingHighlight ? (
-                    <p>Loading...</p>
+                    <SwiperSlide><p>Loading...</p></SwiperSlide>
                 ) : highlightWorks && highlightWorks.length > 0 ? (
-                    highlightWorks.map((highlightWork) => <Card key={highlightWork.id} data={highlightWork} basePath='works'/>)
+                    highlightWorks.map((highlightWork) => (
+                        <SwiperSlide key={highlightWork.id}>
+                            <Card data={highlightWork} basePath='works'/>
+                        </SwiperSlide>
+                    ))
                 ) : (
-                    <p>No works found.</p>
+                    <SwiperSlide><p>No works found.</p></SwiperSlide>
                 )}
+            </Swiper>
             </div>
         </section>
 

@@ -4,6 +4,13 @@ import Card, {DataCard} from '../components/Card';
 import Link from "next/link";
 //import Image from 'next/image';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import 'swiper/css/autoplay';
+import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
+
 interface CertificationCard {
   id: string;
   title: string;
@@ -68,13 +75,39 @@ export default function Page() {
       <section className="works">
         <h2>Recent Works</h2>
         <div className="card-container">
-          {loadingWorksHighlight ? (
-              <div className="loading">Loading...</div>
-          ) : highlightWorks && highlightWorks.length > 0 ? (
-            highlightWorks.map((highlightWork) => <Card key={highlightWork.id} data={highlightWork} basePath='works'/>)
-          ) : (
-              <div className="notfound">No works found.</div>
-          )}
+          <Swiper 
+              modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+              spaceBetween={20}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              loop={true}
+              autoplay={{ delay:2000, disableOnInteraction: false}}
+              effect="coverflow"
+              coverflowEffect={{
+                  rotate: 30,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: false,
+              }}
+              breakpoints={{
+                  640: { slidesPerView: 2},
+                  1024: { slidesPerView: 3 }
+              }}
+          >
+              {loadingWorksHighlight ? (
+                  <SwiperSlide><p>Loading...</p></SwiperSlide>
+              ) : highlightWorks && highlightWorks.length > 0 ? (
+                  highlightWorks.map((highlightWork) => (
+                      <SwiperSlide key={highlightWork.id}>
+                          <Card data={highlightWork} basePath='works'/>
+                      </SwiperSlide>
+                  ))
+              ) : (
+                  <SwiperSlide><p>No works found.</p></SwiperSlide>
+              )}
+          </Swiper>
         </div>
         <Link href="/works"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
@@ -138,13 +171,39 @@ export default function Page() {
         <h2>Recent Articles</h2>
         <h3>Research and Experiment are<br/>my middle name. Here some what I do</h3>
         <div className="card-container">
-          {loadingArticlesHighlight ? (
-              <div className="loading">Loading...</div>
-          ) : highlightArticles && highlightArticles.length > 0 ? (
-            highlightArticles.map((highlightArticle) => <Card key={highlightArticle.id} data={highlightArticle} basePath='articles'/>)
-          ) : (
-              <div className="notfound">No works found.</div>
-          )}
+          <Swiper 
+              modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+              spaceBetween={20}
+              slidesPerView={1}
+              navigation
+              pagination={{ clickable: true }}
+              loop={true}
+              autoplay={{ delay:3000, disableOnInteraction: false}}
+              effect="coverflow"
+              coverflowEffect={{
+                  rotate: 30,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 1,
+                  slideShadows: false,
+              }}
+              breakpoints={{
+                  640: { slidesPerView: 2},
+                  1024: { slidesPerView: 3 }
+              }}
+          >
+              {loadingArticlesHighlight ? (
+                  <SwiperSlide><p>Loading...</p></SwiperSlide>
+              ) : highlightArticles && highlightArticles.length > 0 ? (
+                  highlightArticles.map((highlightArticle) => (
+                      <SwiperSlide key={highlightArticle.id}>
+                          <Card data={highlightArticle} basePath='articles'/>
+                      </SwiperSlide>
+                  ))
+              ) : (
+                  <SwiperSlide><p>No works found.</p></SwiperSlide>
+              )}
+          </Swiper>
         </div>
         <Link href="/articles"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
