@@ -238,6 +238,19 @@
   }
 
   /* Detail Article Section Styles */
+  .detail-container {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .detail-container p{
+    font-size: 36px;
+    font-weight: bold;
+  }
+
   .related-articles{
     position:relative;
     padding-bottom: 50px;
@@ -293,6 +306,35 @@
 .load-more-button:hover {
     background-color: #3372d6;
     color: white;
+}
+
+/* Error Page */
+.error-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.error-container h1 {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.back-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #3372d6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.back-button:hover {
+  background-color: #3372d6;
 }
 
   /* Root Responsive Design */

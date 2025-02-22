@@ -20,14 +20,12 @@ const DetailPage: React.FC<DetailPageProps> = ({ detailPage, basePath }) => {
   return (
     <section className="detail-page">
         <div className="detail-page-header">
-            <div className="circle-1"></div>
-            <div className="circle-2"></div>
-            <div className="detail-page-header-left">
-              <img src="/assets/detail-img.png" />
-            </div>
-            <div className="detail-page-header-right">
-              <h2>{detailPage.title}</h2>
-              <p>{formatDate(detailPage.createdAt)} by {detailPage.createdBy}</p>
+            {/* <div className="circle-1"></div>
+            <div className="circle-2"></div> */}
+            <h1>{detailPage.title}</h1>
+            <div className="detail-page-header-info">
+              <span className="author-name">{detailPage.createdBy}</span>
+              <span className="article-meta">{formatDate(detailPage.createdAt)}</span>
             </div>
         </div>
         <div className="detail-page-body">
