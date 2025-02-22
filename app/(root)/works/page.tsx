@@ -76,7 +76,7 @@ const Page = () => {
             </div>
             <div className="hero-content-right">
                 <p>
-                    Here is the source of knowledge. Writing based on mood, not my routine
+                    Here is my work experience and projects that I have worked on.
                 </p>
             </div>
         </section>

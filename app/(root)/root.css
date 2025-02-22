@@ -353,6 +353,16 @@
     .hero {
       flex-direction: column;
     }
+
+    .skills-certs h3 {
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    .articles h3 {
+      font-size: 24px;
+      line-height: 28px;
+    }
     
     .card-container{
       justify-content: center;

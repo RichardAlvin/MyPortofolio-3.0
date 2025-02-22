@@ -6,7 +6,7 @@ const Footer = () => {
     <footer className="footer">
         <div className="footer-content">
             <div className="contact-message">
-                <p>Feel free to contact me,<br/>Cuz I don’t really always check it!</p>
+                <p>Feel free to contact me,<br/>Cuz I want to hear what you guys think!</p>
             </div>
             <div className="social-links">
                 <a href="#" className="social-icon" aria-label="GitHub">
@@ -25,13 +25,13 @@ const Footer = () => {
             <h6>Pages</h6>
             <div className="footer-link">
                 <ul>
-                    <li><a href="#">Homepage</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Articles</a></li>
-                    <li><a href="#">Certification</a></li>
+                    <li><a href="/">Homepage</a></li>
+                    <li><a href="/works">Works</a></li>
+                    <li><a href="/articles">Articles</a></li>
+                    <li><a href="https://www.linkedin.com/in/richard-alvin-pratama/details/certifications/">Certification</a></li>
                 </ul>
                 <div className="footer-copyright">
-                    <p>Copyright &copy; 2024 Richard Alvin Pratama</p>
+                    <p>Copyright &copy; 2025 Richard Alvin Pratama</p>
                 </div>
             </div>
         </div>

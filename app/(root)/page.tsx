@@ -68,8 +68,8 @@ export default function Page() {
           </div>
           <div className="hero-content-right">
               <p>
-              <strong>Richard Alvin Pratama</strong> is a sans-serif typeface funded by Canonical and developed by Dalton Maag.
-              <Link href="#" className="learn-more">Learn more ↗</Link>
+              I'm <strong>Richard Alvin Pratama</strong>, a Software Engineer with a deep interest in System Development, Databases, and Cloud.
+              <Link href="https://www.linkedin.com/in/richard-alvin-pratama/" className="learn-more">Learn more ↗</Link>
               </p>
           </div>
       </section>
