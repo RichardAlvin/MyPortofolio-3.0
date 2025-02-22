@@ -49,7 +49,9 @@ const Page = () => {
   return (
     <>
         {loadingDetailArticle ? (
+          <section className="detail-container">
             <p>Loading...</p>
+          </section>
         ) : detailArticle ? (
             <DetailPage detailPage={detailArticle}/>
         ) : (
