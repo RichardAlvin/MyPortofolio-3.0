@@ -18,6 +18,8 @@ const Page = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+    const [visibleItems, setVisibleItems] = useState(6);
+
     async function fetchWorks() {
         setLoadingWork(true);
         try {
@@ -46,6 +48,10 @@ const Page = () => {
         setSelectedCategory(category);
     };
 
+    const loadMore = () => {
+        setVisibleItems((prev) => prev + 6);
+    };
+
     useEffect(() => {
         async function fetchHighlightWorks() {
             const res = await fetch('/api/works?IsHighlight=true')
@@ -60,6 +66,7 @@ const Page = () => {
     useEffect(() => {
         fetchWorks();
     }, [searchQuery, selectedCategory]);
+
 
   return (
     <>
@@ -141,11 +148,18 @@ const Page = () => {
                 {loadingWorks ? (
                     <div className="loading">Loading...</div>
                 ) : works && works.length > 0 ? (
-                    works.map((work) => <Card key={work.id} data={work} basePath='works'/>)
+                    works.slice(0, visibleItems).map((work) => <Card key={work.id} data={work} basePath='works'/>)
                 ) : (
                     <div className="notfound">No works found.</div>
                 )}
             </div>
+            {works && visibleItems < works.length && (
+                <div className="load-more-container">
+                    <button className="load-more-button" onClick={loadMore}>
+                        Load More
+                    </button>
+                </div>
+            )}
         </section>
     </>
   )

@@ -58,6 +58,7 @@
     gap: 20px;
     justify-content: space-between;
     margin-top: 20px;
+    min-height: 250px;
   }
 
   .works-more-btn {
@@ -117,6 +118,7 @@
 
   .certs-div {
     flex-grow: 50%;
+    border-bottom: 1px solid white;
   }
 
   .certs-div > h4{
@@ -153,6 +155,8 @@
   .list-search {
     position: relative;
     width: 300px;
+    border: 1px solid white;
+    border-radius: 5px;
   }
 
   .list-search-icon {
@@ -160,7 +164,7 @@
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    color: #888;
+    color: white;
     font-size: 16px;
   }
 
@@ -195,11 +199,16 @@
 }
 
 .list-filter button.active {
-  background-color: #facc15;
-  color: #333;
-  border-color: #facc15;
-  box-shadow: 0 4px 10px rgba(250, 204, 21, 0.5);
+  background-color: #3372d6;
+  color: white;
+  border-color: #3372d6;
+  box-shadow: 0 4px 10px rgba(51, 114, 214, 0.5);
   transform: scale(1.05);
+}
+
+.list-filter button:hover {
+  background-color: #3372d6;
+  border-color: #3372d6;
 }
 
   .loading {
@@ -263,6 +272,28 @@
     right: 5%;
     z-index:-2;
   }
+  
+  .load-more-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.load-more-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #3372d6;
+    color: #3372d6;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.load-more-button:hover {
+    background-color: #3372d6;
+    color: white;
+}
 
   /* Root Responsive Design */
   @media (max-width: 992px) {

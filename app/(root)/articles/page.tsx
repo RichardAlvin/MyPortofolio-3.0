@@ -18,6 +18,8 @@ const Page = () => {
     const [searchQuery, setSearchQuery] = useState("");
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
+    const [visibleItems, setVisibleItems] = useState(6);
+
     async function fetchArticles() {
         setLoadingArticle(true);
         try {
@@ -44,6 +46,10 @@ const Page = () => {
     
     const handleCategoryChange = (category: string | null) => {
         setSelectedCategory(category);
+    };
+
+    const loadMore = () => {
+        setVisibleItems((prev) => prev + 6);
     };
 
     useEffect(() => {
@@ -141,11 +147,18 @@ const Page = () => {
                     {loadingArticle ? (
                         <div className="loading">Loading...</div>
                     ) : articles && articles.length > 0 ? (
-                        articles.map((article) => <Card key={article.id} data={article} basePath='articles'/>)
+                        articles.slice(0, visibleItems).map((article) => <Card key={article.id} data={article} basePath='articles'/>)
                     ) : (
-                        <div className="notfound">No articles found.</div>
+                        <div className="notfound">No works found.</div>
                     )}
                 </div>
+                {articles && visibleItems < articles.length && (
+                    <div className="load-more-container">
+                        <button className="load-more-button" onClick={loadMore}>
+                            Load More
+                        </button>
+                    </div>
+                )}
             </section>
         </>
     )

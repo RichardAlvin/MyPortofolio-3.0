@@ -1,7 +1,7 @@
-bikin slider (swiper.js)
+bikin slider (swiper.js) - done
 coba pakai tailwind
 
-bagian sertifikasi itu buat card card atau kotak kotak 
+bagian sertifikasi itu buat card card atau kotak kotak - done
 banyakin gambar kalau tujuan mau di hire
 
 hover hover biasanya lebay

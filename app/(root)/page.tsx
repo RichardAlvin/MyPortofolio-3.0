@@ -11,6 +11,8 @@ import "swiper/css/navigation";
 import 'swiper/css/autoplay';
 import { Navigation, Pagination, Autoplay, EffectCoverflow } from "swiper/modules";
 
+import { formatDate } from "@/app/utils/dateFormatter";
+
 interface CertificationCard {
   id: string;
   title: string;
@@ -155,7 +157,7 @@ export default function Page() {
                 <Link key={highlightCertification.id} href={highlightCertification.link}><div className="certs-div">
                   <h4>{highlightCertification.title}</h4>
                   <p>{highlightCertification.description}</p>
-                  <p>Valid until: {highlightCertification.expiredAt}</p>
+                  <p>Valid until: {formatDate(highlightCertification.expiredAt)}</p>
                 </div></Link>
               )
             ) : (
