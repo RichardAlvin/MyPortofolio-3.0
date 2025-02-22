@@ -68,7 +68,7 @@ export default function Page() {
           </div>
           <div className="hero-content-right">
               <p>
-              I'm <strong>Richard Alvin Pratama</strong>, a Software Engineer with a deep interest in System Development, Databases, and Cloud.
+              I&apos;m <strong>Richard Alvin Pratama</strong>, a Software Engineer with a deep interest in System Development, Databases, and Cloud.
               <Link href="https://www.linkedin.com/in/richard-alvin-pratama/" className="learn-more">Learn more ↗</Link>
               </p>
           </div>

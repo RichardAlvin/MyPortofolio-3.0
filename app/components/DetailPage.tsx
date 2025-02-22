@@ -13,10 +13,9 @@ export type DataDetailPageProps = {
 
 interface DetailPageProps {
   detailPage: DataDetailPageProps;
-  basePath: string;
 }
 
-const DetailPage: React.FC<DetailPageProps> = ({ detailPage, basePath }) => {
+const DetailPage: React.FC<DetailPageProps> = ({ detailPage }) => {
   return (
     <section className="detail-page">
         <div className="detail-page-header">

@@ -54,7 +54,7 @@ const Page = () => {
                     <p>Loading...</p>
                 </section>
             ) : detailWork ? (
-                <DetailPage detailPage={detailWork} basePath="works"/>
+                <DetailPage detailPage={detailWork}/>
             ) : (
                 <p>Detail Works Not Found</p>
             )}

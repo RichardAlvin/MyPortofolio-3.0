@@ -7,8 +7,7 @@ export async function GET(req: Request) {
     // Get query parameters
     const isHighlight = searchParams.get("IsHighlight");
     const searchQuery = searchParams.get("search")?.toLowerCase() || "";
-    const category = searchParams.get("category")?.toLowerCase() || "";
-
+    
     // Filter data based on query params
     let filteredData = data;
 
