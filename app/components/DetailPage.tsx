@@ -27,9 +27,7 @@ const DetailPage: React.FC<DetailPageProps> = ({ detailPage }) => {
               <span className="article-meta">{formatDate(detailPage.createdAt)}</span>
             </div>
         </div>
-        <div className="detail-page-body">
-          {detailPage.description}
-        </div>
+        <div className="detail-page-body" dangerouslySetInnerHTML={{ __html: detailPage.description }} />
     </section>
   )
 }

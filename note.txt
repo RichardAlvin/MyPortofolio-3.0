@@ -20,3 +20,6 @@ https://medium.com/@RaghavPrabhu/understanding-of-convolutional-neural-network-c
 
 text editor untuk buat article
 wysiwyg untuk description 
+
+pakai 
+https://summernote.org/

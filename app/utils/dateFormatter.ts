@@ -1,5 +1,5 @@
 export const formatDate = (dateString: string): string => {
-    if (!dateString) return "Invalid Date";
+    if (!dateString) return "Permanent";
   
     return new Intl.DateTimeFormat("en-GB", {
       day: "2-digit",

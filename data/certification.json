@@ -1,34 +1,42 @@
 [
     {
         "id": 1,
-        "title": "GCP Associate Cloud Engineer ↗",
-        "description": "Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud",
-        "isHighlight": true,
-        "expiredAt": "2025-02-27T10:30:00Z",
+        "title": "Best UMN Computer Engineering Graduate 25th",
+        "description": "",
+        "isHighlight": false,
+        "expiredAt": "",
         "link": "#"
     },
     {
         "id": 2,
-        "title": "GCP Associate Cloud Engineer ↗",
-        "description": "Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud",
+        "title": "Bangkit 2022 - Cloud Computing",
+        "description": "Program initiated by Google, GoTo, and Traveloka, focuses on Google Cloud Platform and cloud engineering fundamentals",
         "isHighlight": true,
-        "expiredAt": "2025-02-27T10:30:00Z",
-        "link": "#"
+        "expiredAt": "",
+        "link": "https://www.linkedin.com/posts/richard-alvin-pratama_cloudcomputing-indonesia-activity-6964070444685561856-m_AK?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZBz3MBEuCQ4bzRCD2ZB-yEJA_GoGsuX4Y"
     },
     {
         "id": 3,
-        "title": "GCP Associate Cloud Architect ↗",
-        "description": "Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud",
+        "title": "Alibaba Cloud Assoicate - Cloud Computing",
+        "description": "Certification from Alibaba Cloud that focuses on the fundamentals of cloud computing and the services provided by Alibaba Cloud",
         "isHighlight": true,
-        "expiredAt": "2025-02-27T10:30:00Z",
-        "link": "#"
+        "expiredAt": "2025-05-04T10:30:00Z",
+        "link": "https://www.linkedin.com/posts/richard-alvin-pratama_im-happy-to-share-that-ive-obtained-a-new-activity-7060166677954494464-zLdN?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZBz3MBEuCQ4bzRCD2ZB-yEJA_GoGsuX4Y"
     },
     {
         "id": 4,
-        "title": "GCP Associate Cloud Engineer ↗",
-        "description": "Foundation certification validates broad knowledge of cloud concetpts and the products, services, features, benefits, and use cases of Google Cloud",
+        "title": "Alibaba Cloud Associate - Cloud Security",
+        "description": "focuses on security best practices in Alibaba Cloud. It covers how to protect cloud environments and manage security risks",
         "isHighlight": true,
-        "expiredAt": "2025-02-26T10:30:00Z",
-        "link": "#"
+        "expiredAt": "2025-03-26T10:30:00Z",
+        "link": "https://www.linkedin.com/posts/richard-alvin-pratama_cloudsecurity-computing-cloud-activity-7057382295975993344-W3HE?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZBz3MBEuCQ4bzRCD2ZB-yEJA_GoGsuX4Y"
+    },
+    {
+        "id": 5,
+        "title": "Foundational C# with Microsoft",
+        "description": "Initiated by FreeCodeCamp, focuses learn C# Fundamentals and build a strong goundation for software development using the .NET ecosystem",
+        "isHighlight": true,
+        "expiredAt": "",
+        "link": "https://www.linkedin.com/posts/richard-alvin-pratama_im-happy-to-learn-and-get-the-foundational-activity-7108826762662346752-9upX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZBz3MBEuCQ4bzRCD2ZB-yEJA_GoGsuX4Y"
     }
 ]
