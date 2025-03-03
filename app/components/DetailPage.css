@@ -57,6 +57,7 @@
   z-index:-2;
 }
 
+/* Description styling */
 .detail-page-body {
   margin: 3% 20%;
     background-color: white;
@@ -65,6 +66,21 @@
     line-height: 32px;
     letter-spacing: -0.003em;
 }
+
+.detail-page-body a {
+  color: #36c;
+  text-decoration: underline;
+}
+
+.detail-page-body ul {
+  list-style-type: disc;  /* Pastikan bullet muncul */
+  padding-left: 8%;    /* Tambahkan padding agar bullet terlihat */
+}
+
+.detail-page-body li {
+  margin-bottom: 5px; /* Beri jarak antar item */
+}
+
 
 @media (max-width: 576px) {
   .detail-page-header {

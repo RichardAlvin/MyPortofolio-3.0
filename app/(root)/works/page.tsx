@@ -140,7 +140,7 @@ const Page = () => {
                     <button className={`button ${selectedCategory === null ? "active" : ""}`} onClick={() => handleCategoryChange(null)}>All</button>
                     <button className={`button ${selectedCategory === "Development" ? "active" : ""}`} onClick={() => handleCategoryChange("Development")}>Dev</button>
                     <button className={`button ${selectedCategory === "Cloud" ? "active" : ""}`} onClick={() => handleCategoryChange("Cloud")}>Cloud</button>
-                    <button className={`button ${selectedCategory === "Database" ? "active" : ""}`} onClick={() => handleCategoryChange("Database")}>DB</button>
+                    <button className={`button ${selectedCategory === "AI" ? "active" : ""}`} onClick={() => handleCategoryChange("AI")}>AI</button>
                     <button className={`button ${selectedCategory === "Other" ? "active" : ""}`} onClick={() => handleCategoryChange("Other")}>Etc</button>
                 </div>
             </div>
