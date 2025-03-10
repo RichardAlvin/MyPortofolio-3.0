@@ -81,6 +81,10 @@
   margin-bottom: 5px; /* Beri jarak antar item */
 }
 
+.detail-page-body .subtitle {
+  font-weight: bold;
+}
+
 
 @media (max-width: 576px) {
   .detail-page-header {
