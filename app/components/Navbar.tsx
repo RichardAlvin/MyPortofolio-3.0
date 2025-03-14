@@ -16,10 +16,10 @@ const Navbar = () => {
           <Link href="/" className="navbar-title"><b>Richard Alvin</b></Link>
         </div>
         <ul className="navbar-links">
-            <li><Link href="/works">Works</Link></li>
-            <li><Link href="/articles">Articles</Link></li>
-            <li><Link href="/cv">CV</Link></li>
-            <li><Link href="#certification">Games</Link></li>
+            <Link href="/works"><li>Works</li></Link>
+            <Link href="/articles"><li>Articles</li></Link>
+            <Link href="/cv"><li>CV</li></Link>
+            <Link href="#certification"><li>Games</li></Link>
         </ul>
         <div className="navbar-socials">
             <Link href="https://github.com/RichardAlvin" className="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
@@ -39,10 +39,10 @@ const Navbar = () => {
           </button>
         </div>
         {isClick && (<div className="dropdown-menu">
-          <li><Link href="/works">Works</Link></li>
-          <li><Link href="/articles">Articles</Link></li>
-          <li><Link href="/cv">CV</Link></li>
-          <li><Link href="#certification">Games</Link></li>
+          <Link href="/works"><li>Works</li></Link>
+          <Link href="/articles"><li>Articles</li></Link>
+          <Link href="/cv"><li>CV</li></Link>
+          <Link href="#certification"><li>Games</li></Link>
           <li>        
             <div className="navbar-socials-res">
               <Link href="#" className="social-link"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-github" viewBox="0 0 16 16">
