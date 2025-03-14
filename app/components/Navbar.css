@@ -80,7 +80,8 @@
     right: 2rem;
     top: 90%;
     width: 300px;
-    background: rgba(255,255,255,0.1);
+    background-color: white;
+    border: 1px solid #e5e7eb;
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -92,6 +93,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .navbar .dropdown-menu li:hover {
+    background-color: #e5e7eb;
   }
 
   /* Responsive Design */
