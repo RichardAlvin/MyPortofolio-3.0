@@ -50,12 +50,12 @@
     {
         "id": 5,
         "title": "[Thesis] Paddy Disease Classification using Ensemble Deep Learning",
-        "slug": "test-work-3",
+        "slug": "thesis-paddy-disease-classification-using-ensemble-deep-learning",
         "category": "AI",
-        "description": "gergaer arga",
-        "image": "",
-        "isHighlight": true,
-        "createdAt": "2025-02-27T10:30:00Z",
+        "description": "<p><span class='subtitle'>Ringakasan Singkat</span></br>Skripsi ini dibuat dengan latar belakang padi sebagai komoditas pangan penting tetapi terdapat penurunan jumlah produksi padi diakibatkan beragam jenis penyakit padi yang menyulitkan petani dalam melakukan identifikasi dini. Dengan bantuan teknologi terkini seperti deep learning dan ensemble learning, dapat membantu mengekstrak fitur, menganalisa, dan mengidentifikasi penyakit pada tanaman padi.</p></br><p><span class='subtitle'>Ringkasan Teknis</span></br>Sistem pada skripsi ini dibuat dengan spesifikasi teknologi sebagai berikut:</br><ul><li>Google Colab Pro untuk memproses dataset serta melatih model</li><li>Paddy Doctor Datase diambil dari Kaggle sebagai dataset utama</li><li>Pretrained Model meliputi EfficientNetV2B0 dan MobileNetV3-Large</li><li>Ensemble Learning meliputi Average Ensemble dan Concatenate Ensemble</li><li>NuxtJS 2 sebagai framework tampilan PWA</li><li>FastAPI sebagai framework backend yang menjalankan h5 model hasil training</li></ul></p></br><p>Berikut Skripsi lengkap saya terkait proyek ini:</p><div style='height:100vh;overflow:hidden;'><iframe src='/assets/work/paddy-disease/Skripsi_RichardAlvinPratama.pdf' style='width:100%;height:100%;border:none;max-width:100vw;max-height:100vh;'></iframe></div>",
+        "image": "/assets/work/paddy-disease/cover.png",
+        "isHighlight": false,
+        "createdAt": "2025-04-09T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
     },
@@ -66,7 +66,7 @@
         "category": "Development",
         "description": "gergaer arga",
         "image": "",
-        "isHighlight": true,
+        "isHighlight": false,
         "createdAt": "2025-02-27T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
@@ -78,7 +78,7 @@
         "category": "Other",
         "description": "gergaer arga",
         "image": "",
-        "isHighlight": true,
+        "isHighlight": false,
         "createdAt": "2025-02-27T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
@@ -90,7 +90,7 @@
         "category": "Other",
         "description": "gergaer arga",
         "image": "",
-        "isHighlight": true,
+        "isHighlight": false,
         "createdAt": "2025-02-27T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""

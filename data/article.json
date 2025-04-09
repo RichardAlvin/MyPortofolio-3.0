@@ -25,7 +25,7 @@
     },
     {
         "id": 3,
-        "title": "Database Management Strategy in SQL Server Management Studio",
+        "title": "Replication Strategy in SQL Server Management Studio",
         "slug": "test-article-3",
         "category": "Cloud",
         "description": "gergaer argassss",
@@ -37,7 +37,7 @@
     },
     {
         "id": 4,
-        "title": "Test Article-4",
+        "title": "Using View and Stored Procedure SQL Server in .NET 8",
         "slug": "test-article-4",
         "category": "Other",
         "description": "gergaer arga",
