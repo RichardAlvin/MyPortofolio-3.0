@@ -120,28 +120,43 @@ export default function Page() {
           <h3>All Programming language just a tools,<br/>but the logic is the heart of programming</h3>
           <div className="skills-icon">
             <div>
+              <img src="assets/skills/csharp-logo.webp" alt="csharp-logo" />
+            </div>
+            <div>
               <img src="assets/skills/netcore-logo.png" alt="netcore-logo" />
             </div>
             <div>
-              <img src="assets/skills/Laravel-Logo.svg" alt="laravel-logo"/>
+              <img src="assets/skills/laravel-logo.svg" alt="laravel-logo"/>
             </div>
             <div>
-              <img src="assets/skills/go-logo.svg" alt="go-logo" />
+              <img src="assets/skills/go-logo.png" alt="go-logo" />
             </div>
             <div>
               <img src="assets/skills/sqlserver-logo.png" alt="sqlserver-logo"/>
             </div>
             <div>
-              <img src="assets/skills/postgresql-logo.webp" alt="postgresql-logo"/>
+              <img src="assets/skills/ssms-logo.webp" alt="ssms-logo"/>
+            </div>
+            <div>
+              <img src="assets/skills/postgresql-logo.png" alt="postgresql-logo"/>
             </div>
             <div>
               <img src="assets/skills/blazor-logo.png" alt="blazor-logo" />
             </div>
             <div>
-              <img src="assets/skills/react-logo.png" alt="react-logo" />
+              <img src="assets/skills/js-ts-logo.png" alt="js-ts-logo" />
+            </div>
+            <div>
+              <img src="assets/skills/next-logo.png" alt="next-logo" />
             </div>
             <div>
               <img src="assets/skills/gcp-logo.png" alt="gcp-logo" />
+            </div>
+            <div>
+              <img src="assets/skills/sharepoint-logo.png" alt="sharepoint-logo" />
+            </div>
+            <div>
+              <img src="assets/skills/powerautomate-logo.png" alt="powerautomate-logo" />
             </div>
           </div>
         </section>
