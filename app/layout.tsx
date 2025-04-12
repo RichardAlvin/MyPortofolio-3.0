@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Richard Alvin | Web Porto",
   description: "Richard Alvin's Web Portofolio - About | Project | Skill | Article",
+  icons: {
+    icon: "/logo.png", // path from /public
+  },
 };
 
 export default function RootLayout({

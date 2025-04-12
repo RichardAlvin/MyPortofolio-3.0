@@ -74,6 +74,61 @@
     color: #fff;
   }
 
+  /* Contribution Section Styles */
+  .contribution {
+    padding-bottom: 32px;
+  }
+
+  .contribution-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding-top: 32px;
+  }
+
+  .contribution-box{
+    border: 1px solid rgba(173, 216, 230, 0.5);
+    border-radius: .75rem;
+    padding: 1.5rem;
+  }
+
+  .contribution-box-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 1rem;
+  }
+
+  .contribution-box-title {
+    font-size: 22px;
+  }
+
+  .contribution-box-badge {
+    font-size: 14px;
+    padding: 0px 0.75rem;
+    border-radius: 9999px;
+    color: white;
+  }
+
+  .contribution-box-head .light-blue {
+    background-color: rgba(102, 197, 237,0.5);
+  }
+
+  .contribution-box-head .light-purple {
+    background-color: rgba(196, 94, 255,0.5);
+  }
+
+  .contribution-box-body > li{
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(170, 170, 170,0.5);
+    color: #aaa;
+    font-size: 14px;
+  }
+
+  .contribution-box-body > li:last-child {
+    border-bottom: none;
+  }
+
   /* Skill Section Styles */
   .skills-certs{
     background-color: #111;
@@ -347,6 +402,10 @@
     .hero p {
       font-size: 1.5rem;
       line-height: 1.6;
+    }
+
+    .contribution-list{
+      grid-template-columns: 1fr;
     }
   }
 

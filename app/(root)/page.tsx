@@ -115,6 +115,40 @@ export default function Page() {
       </section>
 
       <section className="skills-certs">
+        <section className="contribution">
+          <h2>Contributed Projects</h2>
+          <h3>Collection of my contributed projects, both personal and team based.</h3>
+          <div className="contribution-list">
+              <div className="contribution-box">
+                <div className="contribution-box-head">
+                  <span className="contribution-box-title">Suitmedia</span>
+                  <span className="contribution-box-badge light-blue">Software Engineer (.NET)</span>
+                </div>
+                <ul className="contribution-box-body">
+                  <li>IDX Website</li>
+                  <li>IDX SPOP+</li>
+                  <li>IDClear KPEI</li>
+                  <li>Anugerah Pharmindo Lestari</li>
+                  <li>Bank Maspion</li>
+                  <li>PLN Indonesia Power</li>
+                  <li>.NET & Blazor Boilerplate</li>
+                </ul>
+              </div>
+              <div className="contribution-box">
+              <div className="contribution-box-head">
+                  <span className="contribution-box-title">Other Teams</span>
+                  <span className="contribution-box-badge light-purple">Fullstack</span>
+                </div>
+                <ul className="contribution-box-body">
+                  <li>Visitory Indonesia</li>
+                  <li>Sahabat Pensiun</li>
+                  <li>Curug Sangereng</li>
+                  <li>AI Lecture Research</li>
+                </ul>
+              </div>
+          </div>
+        </section>
+
         <section className="skills">
           <h2>Skills</h2>
           <h3>All Programming language just a tools,<br/>but the logic is the heart of programming</h3>
