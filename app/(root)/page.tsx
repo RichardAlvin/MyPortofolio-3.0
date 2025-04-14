@@ -210,10 +210,10 @@ export default function Page() {
                 </div></Link>
               )
             ) : (
-                <div className="notfound">No works found.</div>
+                <div className="notfound">No certificates found.</div>
             )}
           </div>
-          <button className="works-more-btn">Show More ↗</button>
+          <Link href="https://www.linkedin.com/in/richard-alvin-pratama/details/certifications/"><button className="works-more-btn">Show More ↗</button></Link>
         </section>
 
       </section>
