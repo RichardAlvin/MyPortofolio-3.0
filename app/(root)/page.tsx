@@ -143,6 +143,7 @@ export default function Page() {
                   <li>Visitory Indonesia</li>
                   <li>Sahabat Pensiun</li>
                   <li>Curug Sangereng</li>
+                  <li>Medio Sport Agency</li>
                   <li>AI Lecture Research</li>
                 </ul>
               </div>
