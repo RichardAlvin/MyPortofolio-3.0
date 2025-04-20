@@ -83,6 +83,18 @@
 
 .detail-page-body .subtitle {
   font-weight: bold;
+  display: block;
+}
+
+.detail-page-body img{
+  border: 1px solid black;
+  width: 80%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.detail-page-body p{
+  margin-bottom: 15px;
 }
 
 
@@ -109,4 +121,9 @@
     font-weight: 700;
     font-style: normal;
   }
+
+  .detail-page-body img{
+    width: 100%;
+  }
+  
 }

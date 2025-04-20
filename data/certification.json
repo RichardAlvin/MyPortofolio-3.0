@@ -2,8 +2,8 @@
     {
         "id": 1,
         "title": "Best UMN Computer Engineering Graduate 25th",
-        "description": "",
-        "isHighlight": false,
+        "description": "IPK 3.95 with a study period 4 years. Join several associations, organizations, and committees. Become a lab assistant and research assitant",
+        "isHighlight": true,
         "expiredAt": "",
         "link": "#"
     },
@@ -38,5 +38,13 @@
         "isHighlight": true,
         "expiredAt": "",
         "link": "https://www.linkedin.com/posts/richard-alvin-pratama_im-happy-to-learn-and-get-the-foundational-activity-7108826762662346752-9upX?utm_source=share&utm_medium=member_desktop&rcm=ACoAADZBz3MBEuCQ4bzRCD2ZB-yEJA_GoGsuX4Y"
+    },
+    {
+        "id": 6,
+        "title": "System Design Masterclass with Udemy",
+        "description": "Learn to design real systems like Youtube, Newsfeed, WA, and others with hands-on examples.",
+        "isHighlight": true,
+        "expiredAt": "",
+        "link": "https://ude.my/UC-d789581e-c66f-4dcf-a041-ae9ea3743b52"
     }
 ]
