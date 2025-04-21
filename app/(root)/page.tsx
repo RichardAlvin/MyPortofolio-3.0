@@ -188,10 +188,10 @@ export default function Page() {
               <img src="assets/skills/gcp-logo.png" alt="gcp-logo" />
             </div>
             <div>
-              <img src="assets/skills/sharepoint-logo.png" alt="sharepoint-logo" />
+              <img src="assets/skills/sharepoint-logo.jpeg" alt="sharepoint-logo" />
             </div>
             <div>
-              <img src="assets/skills/powerautomate-logo.png" alt="powerautomate-logo" />
+              <img src="assets/skills/powerautomate-logo.jpeg" alt="powerautomate-logo" />
             </div>
           </div>
         </section>
