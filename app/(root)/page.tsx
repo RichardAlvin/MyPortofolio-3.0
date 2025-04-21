@@ -77,39 +77,39 @@ export default function Page() {
       <section className="works">
         <h2>Recent Works</h2>
         <div className="card-container">
-          <Swiper 
-              modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              loop={true}
-              autoplay={{ delay:2000, disableOnInteraction: false}}
-              effect="coverflow"
-              coverflowEffect={{
-                  rotate: 30,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: false,
-              }}
-              breakpoints={{
-                  640: { slidesPerView: 2},
-                  1024: { slidesPerView: 3 }
-              }}
+        {loadingWorksHighlight ? (
+          <div className="loading">Loading...</div>
+        ) : highlightWorks && highlightWorks.length > 0 ? (
+          <Swiper
+            modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
+            spaceBetween={20}
+            slidesPerView={1}
+            navigation
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{ delay: 2000, disableOnInteraction: false }}
+            effect="coverflow"
+            coverflowEffect={{
+              rotate: 30,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: false,
+            }}
+            breakpoints={{
+              640: { slidesPerView: 2 },
+              1024: { slidesPerView: 3 },
+            }}
           >
-              {loadingWorksHighlight ? (
-                  <SwiperSlide><p>Loading...</p></SwiperSlide>
-              ) : highlightWorks && highlightWorks.length > 0 ? (
-                  highlightWorks.map((highlightWork) => (
-                      <SwiperSlide key={highlightWork.id}>
-                          <Card data={highlightWork} basePath='works'/>
-                      </SwiperSlide>
-                  ))
-              ) : (
-                  <SwiperSlide><p>No works found.</p></SwiperSlide>
-              )}
+            {highlightWorks.map((highlightWork) => (
+              <SwiperSlide key={highlightWork.id}>
+                <Card data={highlightWork} basePath="works" />
+              </SwiperSlide>
+            ))}
           </Swiper>
+        ) : (
+          <div className="loading">No works found.</div>
+        )}
         </div>
         <Link href="/works"><button className="works-more-btn">Show More ↗</button></Link>
       </section>
@@ -223,39 +223,39 @@ export default function Page() {
         <h2>Recent Articles</h2>
         <h3>Research and Experiment are<br/>my middle name. Here some what I do</h3>
         <div className="card-container">
-          <Swiper 
+        {loadingArticlesHighlight ? (
+          <div className="loading">Loading...</div>
+          ) : highlightArticles && highlightArticles.length > 0 ?  (
+            <Swiper
               modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
               spaceBetween={20}
               slidesPerView={1}
               navigation
               pagination={{ clickable: true }}
               loop={true}
-              autoplay={{ delay:3000, disableOnInteraction: false}}
+              autoplay={{ delay: 2000, disableOnInteraction: false }}
               effect="coverflow"
               coverflowEffect={{
-                  rotate: 30,
-                  stretch: 0,
-                  depth: 100,
-                  modifier: 1,
-                  slideShadows: false,
+                rotate: 30,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
               }}
               breakpoints={{
-                  640: { slidesPerView: 2},
-                  1024: { slidesPerView: 3 }
+                640: { slidesPerView: 2 },
+                1024: { slidesPerView: 3 },
               }}
-          >
-              {loadingArticlesHighlight ? (
-                  <SwiperSlide><p>Loading...</p></SwiperSlide>
-              ) : highlightArticles && highlightArticles.length > 0 ? (
-                  highlightArticles.map((highlightArticle) => (
-                      <SwiperSlide key={highlightArticle.id}>
-                          <Card data={highlightArticle} basePath='articles'/>
-                      </SwiperSlide>
-                  ))
-              ) : (
-                  <SwiperSlide><p>No works found.</p></SwiperSlide>
-              )}
-          </Swiper>
+            >
+              {highlightArticles.map((highlightArticle) => (
+                <SwiperSlide key={highlightArticle.id}>
+                  <Card data={highlightArticle} basePath="articles" />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          ) : (
+            <div className="loading">No Articles found.</div>
+          )}
         </div>
         <Link href="/articles"><button className="works-more-btn">Show More ↗</button></Link>
       </section>

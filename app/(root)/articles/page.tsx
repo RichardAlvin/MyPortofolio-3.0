@@ -83,14 +83,17 @@ const Page = () => {
             <section className="article-highlight">
                 <h2>Highlight</h2>
                 <div className="card-container">
-                <Swiper 
+                {loadingHighlight ? (
+                <div className="loading">Loading...</div>
+                ) : highlightArticles && highlightArticles.length > 0 ?  (
+                    <Swiper
                     modules={[Navigation, Pagination, Autoplay, EffectCoverflow]}
                     spaceBetween={20}
                     slidesPerView={1}
                     navigation
                     pagination={{ clickable: true }}
                     loop={true}
-                    autoplay={{ delay:3000, disableOnInteraction: false}}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
                     effect="coverflow"
                     coverflowEffect={{
                         rotate: 30,
@@ -100,22 +103,19 @@ const Page = () => {
                         slideShadows: false,
                     }}
                     breakpoints={{
-                        640: { slidesPerView: 2},
-                        1024: { slidesPerView: 3 }
+                        640: { slidesPerView: 2 },
+                        1024: { slidesPerView: 3 },
                     }}
-                >
-                    {loadingHighlight ? (
-                        <SwiperSlide><p>Loading...</p></SwiperSlide>
-                    ) : highlightArticles && highlightArticles.length > 0 ? (
-                        highlightArticles.map((highlightArticle) => (
-                            <SwiperSlide key={highlightArticle.id}>
-                                <Card data={highlightArticle} basePath='articles'/>
-                            </SwiperSlide>
-                        ))
-                    ) : (
-                        <SwiperSlide><p>No works found.</p></SwiperSlide>
-                    )}
-                </Swiper>
+                    >
+                    {highlightArticles.map((highlightArticle) => (
+                        <SwiperSlide key={highlightArticle.id}>
+                        <Card data={highlightArticle} basePath="articles" />
+                        </SwiperSlide>
+                    ))}
+                    </Swiper>
+                ) : (
+                    <div className="loading">No Articles found.</div>
+                )}
                 </div>
             </section>
 
