@@ -6,7 +6,7 @@
         "category": "AI",
         "description": "<p><span class='subtitle'>Summary Project</span>Proyek deteksi nilai rupiah pada uang kertas yang dibuat menggunakan bahasa python dalam tahap pembuatannya. Bahasa python dipilih dikarenakan terdapat library yang membantu dalam tahap pengerjaan seperti <i>opencv, skimage, matplotlib,</i> dan <i>numpy</i>. Deteksi dilakukan dengan cara mengambil gambar nominal pada nilai rupiah dan menggunakan metode morfologi, segmentasi, dan <i>thresholding</i> untuk disesuaikan dengan dengan data yang dilatih. Data yang dilatih, dibagi dalam 8 kategori dengan menggunakan metode K-NN untuk melatih data tersebut. Alasan penggunaan algoritma K-NN adalah karena algoritma K-NN lebih sederehana untuk dilakukan dibandingkan algoritma lainnya tetapi mampu untuk menghasilkan akurasi klasifikasi yang tidka buruk.</p><p>Tujuan dari proyek deteksi nilai rupiah pada uang kertas ini adalah untuk membantu peningkatan fasilitas pada bidang transportasi atau industri seperti menyortir uang secara otomatis atau dapat diimplementasi pada vending machine untuk mengetahui uang yang dimasukkan oleh pengguna.</p><p><span class='subtitle'>Algoritma K-NN</span>Algoritma <i>K-Nearest Neighbor</i> adalah algoritma <i>supervised learning</i>. <i>Supervised learning</i> adalah suatu metode pengklasifikasian dimana kita sudah memilijki data yang telah dikelompokkan atau dilabelkan terlenbih dahulu. Sedangkan untuk K-NN sendiri berfokus mengambil tetangga terdekat berdasarkan nilai K yang kita atur. Gambar dibawah merupakan ilustrasi cara kerja algoritma K-NN. pada gambar tersebut terdapat 15 data dan 1 data yang baru ditambahkan. Dapat terlihat, 15 data sudah ditraining terlebih dahulu sehingga sudah terklasifikasi menjadi 2 kubu. Saat data ke 16 dimasukkan dan jika K = 3, maka data ke 16 lebih condong ke arah kubu segitiga hijau. Namun apabila K = 7 maka akan menghasilkan data lebih condong ke bintang merah.<img src='/assets/work/rupiah-detector-knn/knn-theory.png' /></p><p><span class='subtitle'>Project Demo Explanation</span>Data gambar uang kami kumpulkan secara manual dengan memfoto uang dengan angle, brightness, keadaan uang, yang berbeda. Setelah itu, data kami kelompokkan dalam masing masing folder. Folder-folder tersebut kami olah agar setiap gambar menghasilkan nilai HSV (Hue Saturation Value). Nilai HSV tersebut kami representasikan dalam bentuk grafik seperti pada gambar dibawah.<img src='/assets/work/rupiah-detector-knn/knn-demo.png' />Terlihat pada grafik tersebut, terdapat satu data uji berbentuk kotak hitam yang akan diklasifikasikan. Dengan metode K-NN kita tinggal mengecek jarak antara titik titik tersebut berdasarkan nilai K.</p>",
         "image": "/assets/work/rupiah-detector-knn/cover.png",
-        "isHighlight": true,
+        "isHighlight": false,
         "createdAt": "2025-03-15T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
@@ -88,10 +88,10 @@
         "title": "[IOT] Ghorilard",
         "slug": "iot-ghorilard",
         "category": "Other",
-        "description": "on progress ghorilard",
+        "description": "<p><span class='subtitle'>Apa itu Ghorilard?</span>Ghorilard yaitu alat yang kami buat untuk monitoring kualitas air pada budidaya udang. Ini merupakan proyek Internet of Things yang terdiri dari device, communication protocol, backend, database, and frontend. Kenapa kami namakan Ghorilard? Kata Ghorilard sendiri diambil dari singkatan nama pada anggota kelompok kami. Sehingga proyek ini bisa menjadi identitas kelompok kami.</p><p><span class='subtitle'>Latar Belakang</span>Perubahan kualitas air yang tidak sesuai dengan kondisi ideal udang adalah penyebab utama kematian massal terjadi pada tambak udang. Masalah ini sering terjadi di daerah Pemalang, Jawa Tengah. Dimana para pembudidaya sering mendapati udang di tambak mereka mengalami mati massal secara tiba-tiba</p><p><span class='subtitle'>Solusi</span>Kami membuat alat yang dapat memonitor parameter kualitas air tambah udang. Alat yang kami buat dapat terhubung dengan internet dan menyediakan interface melalui website. Sehingga dapat memonitor dan menganalisa suhu serta PH air pada tambak udang secara realtime.</p><p><span class='subtitle'>Berikut PPT Ghorilard</span><div style='height:100vh;overflow:hidden;'><iframe src='/assets/work/iot-ghorilard/ppt_ghorilard.pdf' style='width:100%;height:100%;border:none;max-width:100vw;max-height:100vh;'></iframe></div></p>",
         "image": "/assets/work/iot-ghorilard/cover.jpg",
-        "isHighlight": false,
-        "createdAt": "2025-02-27T10:30:00Z",
+        "isHighlight": true,
+        "createdAt": "2025-04-27T14:00:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
     },
@@ -103,7 +103,19 @@
         "description": "on progress shop services progress tracker",
         "image": "",
         "isHighlight": false,
-        "createdAt": "2025-02-27T10:30:00Z",
+        "createdAt": "2025-04-27T00:00:00Z",
+        "createdBy": "Richard Alvin",
+        "updatedAt": ""
+    },
+    {
+        "id": 10,
+        "title": "[API] Open Library API using .NET 8",
+        "slug": "api-open-library-api-using-net-8",
+        "category": "Development",
+        "description": "on progress open library api using .net 8",
+        "image": "",
+        "isHighlight": false,
+        "createdAt": "2025-04-27T00:00:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
     }
