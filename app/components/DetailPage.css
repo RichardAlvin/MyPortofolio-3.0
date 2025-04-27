@@ -65,6 +65,7 @@
     font-size: 20px;
     line-height: 32px;
     letter-spacing: -0.003em;
+    text-align: justify;
 }
 
 .detail-page-body a {
