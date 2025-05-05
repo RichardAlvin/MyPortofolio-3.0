@@ -18,7 +18,7 @@
         "category": "Development",
         "description": "<p>Website Desa Curug Sangereng merupakan proyek pengabdian masyarakat yang diinisiasi oleh Universitas Multimedia Nusantara. Dalam proyek ini, penulis berperan sebagai backend developer bekerja sama dengan satu frontend developer dan tim lainnya dalam mengumpulkan asset yang diperlukan. Website ini dibuat dalam kurun waktu kurang lebih 3 bulan mulai dari tahap pengumpulan informasi sampai tahap presentasi demo website kepada pemangku desa.</p><p>Website Desa Curug Sangereng ini dibentuk dengan stack tech sebagai berikut:</p><ul><li>Nuxt 2 sebagai tampilan website baik tampilan desktop maupun mobile</li><li>Laravel 9 sebagai penyedia API dan pengelolaan data baik website maupun CMS</li><li>PhpMyAdmin (MySQL) sebagai sistem manajemen basis data</li><li>RumahWeb sebagai penyedia layanan hosting dan domain</li></ul><p>Website Desa Curug Sangereng dibuat untuk memudahkan masyarakat desa dalam mengakses informasi baik terkait data wilayah, layanan desa, usaha, galeri desa dan lain sebagainya. Berikut halaman awal website Ketika mengakses link berikut <a href='https://curugsangereng.id/'>https://curugsangereng.id/</a></p><img src='/assets/work/web-curug-sangereng/web-curug-sangereng-village-home.jpg' /><div class='desc-2-col'><div class='desc-2-col-left'><p>Content Management System atau CMS juga dibuat untuk membantu pengguna dalam mengelola menu, data, dan asset yang akan ditampilkan pada website. CMS juga dibuat menggunakan Nuxt 2. Halaman login page untuk mengakses CMS dapat dilihat pada gambar di samping.</p></div><div class='desc-2-col-right'></div></div>",
         "image": "/assets/work/web-curug-sangereng/cover.png",
-        "isHighlight": true,
+        "isHighlight": false,
         "createdAt": "2025-02-27T10:30:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
@@ -112,10 +112,10 @@
         "title": "[API] Open Library API using .NET 8",
         "slug": "api-open-library-api-using-net-8",
         "category": "Development",
-        "description": "on progress open library api using .net 8",
-        "image": "",
-        "isHighlight": false,
-        "createdAt": "2025-04-27T00:00:00Z",
+        "description": "<p>Github Link: <a href='https://github.com/RichardAlvin/OpenLibraryAPI'>https://github.com/RichardAlvin/OpenLibraryAPI</a></p><p><span class='subtitle'>Apa itu Open Library API?</span>Open library API adalah proyek mandiri yang bertujuan untuk menyimpan buku, file, ppt, dan lainnya agar dapat diakses secara publik maupun berbayar oleh masyarakat. Selain itu, proyek ini dibuat untuk mengimplementasikan pembuatan API menggunakan .NET 8.</p><p><span class='subtitle'>Package Proyek</span><ul><li>Microsoft.AspNetCore.Identity.EntityFrameworkCore (8.0.5)</li><li>Microsoft.EntityFrameworkCore.Design (8.0.5)</li><li>Microsoft.EntityFrameworkCore.SqlServer (8.0.5)</li><li>Microsoft.EntityFrameworkCore.Tools (8.0.5)</li><li>AutoMapper (13.0.1)</li><li>Swashbuckle.AspNetCore (6.4.0)</li></ul></p><p><span class='subtitle'>Struktur Proyek</span>Berikut merupakan struktur proyek yang saya gunakan<img src='/assets/work/api-open-library-api-using-net-8/struktur.png' />Dari struktur diatas, dalam satu solution OpenLibraryAPI, saya memisahkan menjadi 8 proyek (2 web project dan 6 class project). Kedua web project tersebut dipisah dengan tujuan agar memisahkan antara API untuk CMS Admin dan Website publik. Pada class project <b>Configuration</b> berisi konfigurasi seperti automapper, role claims, roles info dan lain sebagainya. Pada class project <b>DataAccess</b> berisi model, dbcontext dan juga file migrasi. Untuk <b>Exceptions, Requests, Responses, </b>dan <b>Services</b> dipisahkan dari 2 web project agar lebih modular, reusability, dan menerapkan clean architecture.</p><p><span class='subtitle'>Hasil Implementasi</span>Berikut merupakan project ketika berhasil dijalankan, melakukan login by username, mengakses API yang terautentikasi:<img src='/assets/work/api-open-library-api-using-net-8/cover.png' /><img src='/assets/work/api-open-library-api-using-net-8/login.png'/><img src='/assets/work/api-open-library-api-using-net-8/test-api-1.png'/><img src='/assets/work/api-open-library-api-using-net-8/test-api-2.png' /></p>",
+        "image": "/assets/work/api-open-library-api-using-net-8/cover.png",
+        "isHighlight": true,
+        "createdAt": "2025-05-05T00:00:00Z",
         "createdBy": "Richard Alvin",
         "updatedAt": ""
     }
